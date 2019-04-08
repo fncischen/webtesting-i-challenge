@@ -5,14 +5,14 @@ const enhancer = require('./enhancer.js');
 test("Test item for success", (item) => {
     expect(enhancer.succeed(item.enhancer)).toBeLessThanOrEqualTo({
     
-        enhancement: , 
-        durability:
+        enhancement: 20, 
+        durability: 100
 
     })
     .toBeGreaterThanOrEqualTo({
 
-        enhancement: ,
-        durability: 
+        enhancement: 0,
+        durability: 0
         
     })
 });
@@ -20,14 +20,14 @@ test("Test item for success", (item) => {
 test("Test item for failure", (item) => {
     expect(enhancer.fail(item)).toBeLessThanOrEqualTo({
     
-        enhancement: , 
-        durability:
+        enhancement: 20, 
+        durability: 100
 
     })
     .toBeGreaterThanOrEqualTo({
 
-        enhancement: ,
-        durability: 
+        enhancement: 0,
+        durability: 0
         
     })
 })
