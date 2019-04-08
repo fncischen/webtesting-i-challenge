@@ -1,33 +1,36 @@
 const enhancer = require('./enhancer.js');
 // test away!
 
+// const d = {
+//     enhancement: 15,
+//     durability: 5
+// }
+
+
 // https://jestjs.io/docs/en/expect#expectvalue
-test("Test item for success", (item) => {
-    expect(enhancer.succeed(item.enhancer)).toBeLessThanOrEqualTo({
+test("Test item for success", () => {
+
+    const d = {
+        enhancement: 15,
+        durability: 5
+    }
     
-        enhancement: 20, 
-        durability: 100
+    const succededItem = enhancer.succeed(d);
 
-    })
-    .toBeGreaterThanOrEqualTo({
+    expect(succededItem.enhancement).toBeGreaterThanOrEqual(0);
 
-        enhancement: 0,
-        durability: 0
-        
-    })
 });
 
-test("Test item for failure", (item) => {
-    expect(enhancer.fail(item)).toBeLessThanOrEqualTo({
-    
-        enhancement: 20, 
-        durability: 100
+test("Test item for failure", () => {
 
-    })
-    .toBeGreaterThanOrEqualTo({
+    const d = {
+        enhancement: 15,
+        durability: 5
+    }
 
-        enhancement: 0,
-        durability: 0
-        
-    })
+    const failedItem = enhancer.fail(d);
+
+    expect(failedItem.durability).toBeLessThanOrEqual(20);
 })
+
+

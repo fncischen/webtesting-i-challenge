@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "jest": "^24.7.1",
-    "package": "^1.0.1"
+    "package": "^1.0.1",
+    "test": "^0.6.0"
   },
   "name": "webtesting",
   "version": "1.0",

@@ -6,7 +6,6 @@ module.exports = {
 };
 
 function succeed(item) {
-  item.name = "Successful name";
   if ((item.enhancement < 20 && item.enhancement >= 0))
   {
   item.enhancement += 1;
