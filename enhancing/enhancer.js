@@ -7,27 +7,25 @@ module.exports = {
 
 function succeed(item) {
   item.name = "Successful name";
-  if ((item.enhancement <= 20 && item.enhancement >= 0) || (item.durability <= 100 && item.durability >= 0 ))
+  if ((item.enhancement < 20 && item.enhancement >= 0))
   {
-    return { ...item };
+  item.enhancement += 1;
   }
-  else {
-    item.enhancement = 20;
-    item.durability = 100;
-    return { ...item };
-  }
+  return { ...item };
 }
 
 function fail(item) {
-  if ((item.enhancement <= 20 && item.enhancement >= 0) || (item.durability <= 100 && item.durability >= 0 ))
+  if (item.enhancement < 15)
   {
-    item.enhancement = 0;
-    item.durability = 0;
-    return { ...item };
+    item.durability -= 5;
   }
-  else {
-    return { ...item };
+  else if (item.enhancement > 15){
+    item.durability -= 5;
   }
+  if (item.enhancement > 16) {
+    item.enhancement -= 1; 
+  }
+  return { ...item };
 }
 
 function repair(item) {
