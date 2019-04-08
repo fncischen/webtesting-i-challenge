@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "jest": "^24.7.1",
+    "package": "^1.0.1"
+  },
+  "name": "webtesting",
+  "version": "1.0",
+  "description": "\"Testing Web App\"",
+  "main": "index.js",
+  "repository": "https://github.com/fncischen/webtesting-i-challenge.git",
+  "author": "Francis Chen <fncis.chen@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --watch"
+  }
+}
